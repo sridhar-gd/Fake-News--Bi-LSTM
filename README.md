@@ -18,8 +18,10 @@ This project aims to detect fake news using a dataset obtained from Kaggle. The 
 
 **`PREPROCESSING`**
 
-1. Stemming was implemented using NLTK to reduce the words to their root forms.
-2. One-hot representations were used to convert the textual data into numerical form for model training.
+1. Removing punctuations, stop words, and converting the upper case letters to lower case letters.
+2. Stemming was implemented using NLTK to reduce the words to their root forms.
+3. One-hot representations were used to convert the textual data into numerical form for model training.
+4. Padding to ensure that all the indexes were of equal length.
 
 **`MODEL ARCHITECTURE`**
 
@@ -28,6 +30,7 @@ The model consists of an embedding layer followed by a Bidirectional LSTM layer 
 
 **`TRAINING`**
 
+X represented the independent variables (i.e., the headlines) and y represented the target/dependent variable (i.e., the kind of news)
 The model was trained using the training dataset with the following specifications:
 
 1. Loss function: Huber
